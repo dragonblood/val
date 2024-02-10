@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  background-image: url('./ice-cream-pattern.png'); /* Adjust path as necessary */
+  background-image: url('./ice-cream-pattern.png');
   background-repeat: repeat;
-  background-size: 100px 100px; /* Adjust based on the actual size of your image */
+  background-size: 100px 100px;
 }
 
 .App-logo {
@@ -16,8 +16,18 @@
   }
 }
 
+.message{
+  font-size: 10vh;
+  font-weight: bold;
+  color: #64281b;
+  margin: 40px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fbe4db;
+
+}
+
 .App-header {
-  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,7 +61,7 @@
 
 .heart {
   /* make the font size random between 10 to 80px */
-  font-size: calc(10px + 70 * random());
+  font-size: calc(10px + 40 * random());
   position: fixed;
   top: -100px; /* Start off-screen */
   animation-name: fall;
@@ -60,3 +70,47 @@
 }
 
 /* You might want to add more specific styles for positioning hearts randomly or having multiple hearts with different timings */
+
+.heart {
+  position: absolute;
+  will-change: transform;
+}
+
+.App-header {
+  position: relative;
+  overflow: hidden; /* Keeps the hearts within the header */
+}
+
+button {
+  margin-left: 30px;
+}
+
+button:hover {
+  
+}
+
+/* Dark mode background style */
+.dark-mode {
+  background-color: #333; /* Darker background */
+  box-shadow: "0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5)";
+  filter: brightness(80%);
+  color: white; /* Adjust text color for better visibility */
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s; /* Adjust duration as needed */
+  animation-timing-function: ease-in-out;
+}
