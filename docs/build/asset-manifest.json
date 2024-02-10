@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.bf0c9ea3.css",
+    "main.js": "./static/js/main.c8d9502c.js",
+    "static/media/ice-cream-pattern.png": "./static/media/ice-cream-pattern.19cf26ec05815bdbe6f8.png",
+    "index.html": "./index.html",
+    "main.bf0c9ea3.css.map": "./static/css/main.bf0c9ea3.css.map",
+    "main.c8d9502c.js.map": "./static/js/main.c8d9502c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf0c9ea3.css",
+    "static/js/main.c8d9502c.js"
+  ]
+}
