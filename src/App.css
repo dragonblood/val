@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url('./ice-cream-pattern.png'); /* Adjust path as necessary */
+  background-repeat: repeat;
+  background-size: 100px 100px; /* Adjust based on the actual size of your image */
 }
 
 .App-logo {
@@ -14,14 +17,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
@@ -36,3 +39,24 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.heart {
+  /* make the font size random between 10 to 80px */
+  font-size: calc(10px + 70 * random());
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* You might want to add more specific styles for positioning hearts randomly or having multiple hearts with different timings */
