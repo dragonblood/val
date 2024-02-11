@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import yey from './kawaii-cute.gif';
 
 function App() {
   const [message, setMessage] = useState('Will you be my Valentine?');
@@ -53,9 +54,8 @@ function App() {
       fontSize: Math.floor(Math.random() * 50) + 10 
     }));
     setHearts(newHearts);
-
     setShowButtons(false);
-    setMessage('Yeyeyey thank you kate!'); 
+    setMessage('Yeyeyey thank you'); 
   };
 
   return (
@@ -64,10 +64,16 @@ function App() {
         <p className='message'>{message}</p>
         {showButtons && (
           <div className="buttons">
-            <button onClick={handleYesClick} style={{ fontSize: `${yesSize}em`, padding: '10px 20px', backgroundColor: '#ff5f5f', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>Yes</button>
-            <button onClick={handleNoClick} style={{ padding: '10px 20px', backgroundColor: '#5f5fff', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>{noMessage}</button>
+            <button onClick={handleYesClick} style={{ fontSize: `${yesSize}em`, padding: '10px 20px', backgroundColor: '#d08e6d', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>Yes</button>
+            <button onClick={handleNoClick} style={{ padding: '10px 20px', backgroundColor: '#B34934', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>{noMessage}</button>
           </div>
         )}
+        {!showButtons && (
+  <div className="gif-container">
+    <img src={yey} alt="Celebration GIF" />
+  </div>
+)}
+
         {hearts.map(({ emoji, id, duration, delay, left, fontSize}) => (
           <div
             key={id}
