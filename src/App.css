@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "affectionately";
+  src: url("./affectionately.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
 .App {
   text-align: center;
-  background-image: url('./ice-cream-pattern.png');
+  background-image: url("./ice-cream-pattern.png");
   background-repeat: repeat;
   background-size: 100px 100px;
 }
@@ -16,15 +23,15 @@
   }
 }
 
-.message{
+.message {
   font-size: 10vh;
+  font-family: "affectionately", sans-serif;
   font-weight: bold;
   color: #64281b;
   margin: 40px;
   /* padding: 40px; */
   border-radius: 10px;
-  background-color: #fbe4db;
-
+  background-color: #fbe4dbc0;
 }
 
 .App-header {
@@ -86,7 +93,6 @@ button {
 }
 
 button:hover {
-  
 }
 
 /* Dark mode background style */
@@ -99,13 +105,21 @@ button:hover {
 
 /* Shake animation */
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     transform: translateX(-10px);
   }
-  20%, 40%, 60%, 80% {
+  20%,
+  40%,
+  60%,
+  80% {
     transform: translateX(10px);
   }
 }
@@ -113,4 +127,70 @@ button:hover {
 .shake {
   animation: shake 0.5s; /* Adjust duration as needed */
   animation-timing-function: ease-in-out;
+}
+
+.yes-button {
+  padding: 10px 20px;
+  background-color: #d08e6d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.no-button {
+  padding: 10px 20px;
+  background-color: #b34934;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.score-display {
+  font-size: 5vh;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fbe4dbc0;
+  color:  #64281b;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.dialog {
+  background-color: #d08e6d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+
+  border-radius: 28px;
+background: #dbc6be;
+
+box-shadow:  28px 28px 33px #695f5b,
+             -28px -28px 33px #958581;
+}
+
+.dialog-message{
+  font-size: 2.5vh;
+  color: #64281b;
+}
+
+.close-button{
+  background-color: #b34934;
+  border-radius: 20px;
+  padding: 20px 40px 20px 40px;
 }
