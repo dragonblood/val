@@ -5,11 +5,11 @@ import yey from './kawaii-cute.gif';
 function App() {
   const [message, setMessage] = useState('Will you be my Valentine?');
   const [yesSize, setYesSize] = useState(1);
-  const [noMessage, setNoMessage] = useState('Are you sure?');
+  const [noMessage, setNoMessage] = useState('No');
   const [hearts, setHearts] = useState([]);
   const [showButtons, setShowButtons] = useState(true);
   const [darkMode, setDarkMode] = useState(false); // New state for dark mode
-  const noMessages = ['Really sure?', 'Think again!', 'Are you 100% sure?', '😢', '😭'];
+  const noMessages = ['Are you sure?', 'Really sure?', 'Think again! 😢', 'You are breaking my heart 😭', 'You no love me( 💔', 'I am sad now 😭', 'No cookies for you 🍪', 'No cake for you 🍰', 'No ice cream for you 🍦', 'No candy for you 🍬'];
 
     // State to determine if the user is on a mobile device
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
