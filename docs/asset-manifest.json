@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "./static/css/main.99627b9d.css",
-    "main.js": "./static/js/main.a6ee69c1.js",
+    "main.js": "./static/js/main.b83274ef.js",
     "static/media/kawaii-cute.gif": "./static/media/kawaii-cute.d172874d28a66d35d9df.gif",
     "static/media/affectionately.ttf": "./static/media/affectionately.c70672637802f16eafcf.ttf",
     "static/media/ice-cream-pattern.png": "./static/media/ice-cream-pattern.19cf26ec05815bdbe6f8.png",
     "index.html": "./index.html",
     "main.99627b9d.css.map": "./static/css/main.99627b9d.css.map",
-    "main.a6ee69c1.js.map": "./static/js/main.a6ee69c1.js.map"
+    "main.b83274ef.js.map": "./static/js/main.b83274ef.js.map"
   },
   "entrypoints": [
     "static/css/main.99627b9d.css",
-    "static/js/main.a6ee69c1.js"
+    "static/js/main.b83274ef.js"
   ]
 }
