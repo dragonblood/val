@@ -92,11 +92,10 @@ function App() {
   };
 
   return (
-    <>
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
     <Helmet>
         <title>Valentine's Day Special</title>
-        <meta name="description" content="Will you be my Valentine? Click the ❤️ to increase your love score!" />
+        <meta name="description" content="Will you be my Valentine?" />
         <meta name="keywords" content="Valentine, Love, Emoji Game" />
         <meta property="og:title" content="Valentine's Day Special" />
     </Helmet>
@@ -149,7 +148,6 @@ function App() {
         ))}
       </header>
     </div>
-    </>
   );
 }
 
